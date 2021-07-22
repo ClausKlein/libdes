@@ -68,7 +68,6 @@
 #include <unistd.h>
 #else
 #include <io.h>
-extern int exit();
 #endif
 #include <signal.h>
 #ifndef VMS
@@ -318,8 +317,6 @@ char **argv;
 	printf("DES cbc bytes      per sec = %12.2f (%5.1fuS)\n",c,8.0e6/c);
 	printf("DES ede cbc bytes  per sec = %12.2f (%5.1fuS)\n",d,8.0e6/d);
 	printf("crypt              per sec = %12.2f (%5.1fuS)\n",e,1.0e6/e);
-	exit(0);
-#if defined(LINT) || defined(MSDOS)
-	return(0);
-#endif
+
+	return 0;
 	}

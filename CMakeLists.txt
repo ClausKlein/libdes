@@ -22,6 +22,8 @@ add_library(
 )
 target_compile_definitions(des PRIVATE LIBDES_LIT)
 
+# TODO add_subdirectory(examples)
+
 install(TARGETS des LIBRARY)
 install(FILES des.h TYPE INCLUDE)
 
