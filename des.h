@@ -190,7 +190,7 @@ char *des_crypt(const char *buf,const char *salt);
 #ifdef HEADER_DES_LOCL_H
 char *crypt(const char *buf,const char *salt);
 #else
-char *crypt();
+//FIXME: prevent compile error on OXS! CK char *crypt();
 #endif
 #endif
 #endif
